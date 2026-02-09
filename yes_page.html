@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAY 💖</title>
+  <link rel="stylesheet" href="yes_style.css" />
+</head>
+<body>
+
+  <div class="box">
+    <h1> i know im the best
+    <p id="planText"></p>
+
+    <img id="finalGif" class="gif" alt="Happy gif" />
+  </div>
+
+  <script>
+    const plan = localStorage.getItem("valentinePlan");
+    const gif  = localStorage.getItem("valentineGif");
+
+    document.getElementById("planText").textContent =
+      "So we’re doing: " + (plan || "something cute 💖");
+
+    document.getElementById("finalGif").src =
+      gif || "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDVpams2aWsyeHdmd3N4dTdkdzJiZjlnMzIwa2Y1dnBtZ3BzbDlmaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VFZDuY0nePXry/giphy.gif"
+  </script>
+
+</body>
+</html>
